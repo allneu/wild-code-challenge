@@ -1,0 +1,35 @@
+.centered {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+  
+.cut {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+  
+.transparent {
+    color: rgba(255, 255, 255, 0);
+}
+  
+.full {
+    color: rgb(255, 255, 255);
+}
+  
+.text {
+    font-family: 'Tungsten', monospace;
+    font-size: 12vh;
+    width: 175%;
+    text-align: center;
+    -webkit-text-stroke-width: 1.2px;
+    -webkit-text-stroke-color: white;
+    -webkit-font-smoothing: antialiased;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    letter-spacing: 20px;
+    line-height: 170%;
+}
+  

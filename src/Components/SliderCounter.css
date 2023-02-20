@@ -1,0 +1,29 @@
+.slide-bar {
+  position: absolute;
+  display: flex;
+  top: 75%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+}
+
+.counter {
+  color: white;
+  font-size: 2vh;
+  margin: 2%;
+  height: 8px;
+}
+
+#dot {
+    height: 8px;
+    width: 5px;
+    border-radius: 30%;
+    border: 1px solid white;
+    display: inline-block;
+    margin: 2%;
+    margin-top: 3%;
+  }
+  
+.active {
+  background-color: #ffffff;
+}
