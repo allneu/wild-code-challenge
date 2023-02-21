@@ -21,15 +21,15 @@
   
 .text {
     font-family: 'Tungsten', monospace;
-    font-size: 12vh;
-    width: 175%;
+    font-size: 7vh;
+    width: 170%;
     text-align: center;
-    -webkit-text-stroke-width: 1.2px;
+    -webkit-text-stroke-width: 1px;
     -webkit-text-stroke-color: white;
     -webkit-font-smoothing: antialiased;
     text-overflow: ellipsis;
     overflow: hidden;
-    letter-spacing: 20px;
+    letter-spacing: 10px;
     line-height: 170%;
 }
   

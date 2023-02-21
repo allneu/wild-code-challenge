@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { AnimatePresence, motion } from 'framer-motion'
+import { Image } from 'react-image-and-background-image-fade'
 import { SliderData } from './Components/SliderData';
 import "./App.css";
 import MainImage from "./Components/MainImage";
@@ -8,6 +10,7 @@ import InfoContainer from "./Components/InfoContainer";
 function App() {
 
     const [current, setCurrent] = useState(0);
+    const [show, setShow] = useState(false);
     const length = SliderData.length;
 
     const nextSlide = () => {
@@ -26,6 +29,10 @@ function App() {
         return current === 0 ? length - 1 : current - 1;
     };
 
+    const showImage = () => {
+        setShow(!show);
+    }
+
     if (!Array.isArray(SliderData) || SliderData.length <= 0) {
         return null;
     }
@@ -38,17 +45,19 @@ function App() {
                 <p>XYZ PHOTOGRAPHY</p>
             </div>
 
-            <div className="containers">
-                <SideImage imgID={prevSlideNumber()} side='left' onClick={prevSlide}/>
-                <MainImage current={current} length={length}/>
-                <SideImage imgID={nextSlideNumber()} side='right' onClick={nextSlide}/>
+            <div 
+                className="containers"
+            >
+                <SideImage imgID={prevSlideNumber()} side='left' onClick={prevSlide} show={show}/>
+                <MainImage current={current} length={length} show={show}/>
+                <SideImage imgID={nextSlideNumber()} side='right' onClick={nextSlide} show={show}/>
             </div>
 
-            <InfoContainer data={currimg}/>
-
-            <div className="background">
+            <InfoContainer data={currimg} show={show} showImage={showImage}/>
+            
+            <motion.div className="background">
                 <img src={currimg.small_image} id="bck-img" alt={currimg.text}/>
-            </div>
+            </motion.div>
 
         </div>
     );

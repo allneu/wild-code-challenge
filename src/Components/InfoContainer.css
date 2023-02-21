@@ -1,7 +1,7 @@
 .info-container {
     position: absolute;
     top: 65%;
-    left: 75%;
+    left: 80%;
     width: 12%;
     z-index: 3;
     font-family: 'Tungsten';
@@ -17,4 +17,3 @@
     text-align: right;
     padding: 8%;
 }
-  
