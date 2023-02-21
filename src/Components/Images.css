@@ -1,29 +1,30 @@
 .container {
-    overflow: visible;
+  overflow: visible;
 }
 
 .container > img {
-    height: 100%;
-    width: 100%;
-    border: 1px solid #000;
-    border-radius: 10px;
+  height: 100%;
+  width: 100%;
+  border: 0.07vw solid #000;
+  border-radius: 1vw;
 }
 
 .center {
-    align-self: center;
-    margin: 20%;
-    scale: 1.5;
+  align-self: center;
+  margin: 20%;
+  scale: 1.5;
+  cursor: pointer;
 }
 
 .small {
-    scale: 0.8;
-    cursor: pointer;
+  scale: 0.8;
+  cursor: pointer;
 }
 
 .left {
-    align-self: flex-end;
+  align-self: flex-end;
 }
 
 .right {
-    align-self: flex-start;
+  align-self: flex-start;
 }
