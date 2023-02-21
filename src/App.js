@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import { AnimatePresence, motion } from 'framer-motion'
-import { Image } from 'react-image-and-background-image-fade'
+import { motion } from 'framer-motion'
+
 import { SliderData } from './Components/SliderData';
-import "./App.css";
 import MainImage from "./Components/MainImage";
 import SideImage from "./Components/SideImage";
 import InfoContainer from "./Components/InfoContainer";
+
+import "./App.css";
 
 function App() {
 

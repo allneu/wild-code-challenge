@@ -1,7 +1,8 @@
 import React from "react";
-import './InfoContainer.css';
 import styled from "styled-components";
 import { motion } from 'framer-motion'
+
+import './InfoContainer.css';
 
 
 function InfoContainer( { data, show, showImage } ) {
@@ -15,27 +16,29 @@ function InfoContainer( { data, show, showImage } ) {
         font-weight: bolder;
         border-radius: 20px;
         border-shadow: 2px white;
+
+        // Change the cursor to pointer only when the bubtton is visible
         cursor: ${props => (props.hide && show) || (!props.hide && !show) ? "pointer" : "default"}
   `;
 
-    const info = {
+    const animations = {
         hidden: { 
             opacity: 0,
         },
         show: {
-        opacity: show ? 0 : 1,
-        transition: {
-            duration: 1,
-            delay: 1.7
-        },
+            opacity: show ? 0 : 1,
+            transition: {
+                duration: 1,
+                delay: 1.7
+            }
         },
         invertedShow: {
-        opacity: show ? 1 : 0,
-        y: 150,
-        transition: {
-            duration: 0.5,
-            delay: 2
-        },
+            opacity: show ? 1 : 0,
+            y: 150,
+            transition: {
+                duration: 0.5,
+                delay: 2
+            },
         },
     };
 
@@ -44,7 +47,7 @@ function InfoContainer( { data, show, showImage } ) {
         <motion.div 
             className="info-container"
             key={data.text}
-            variants={info}
+            variants={animations}
             initial="hidden"
             animate="show"
         >
@@ -57,9 +60,10 @@ function InfoContainer( { data, show, showImage } ) {
         
         <motion.div
             className="info-container"
-            variants={info}
+            variants={animations}
             initial="hidden"
-            animate="invertedShow">
+            animate="invertedShow"
+        >
             <Button hide onClick={showImage}>HIDE</Button>
         </motion.div>
         </>

@@ -1,4 +1,5 @@
 import React from "react";
+
 import './SliderCounter.css';
 
 function SliderCounter( { current, length } ) {
